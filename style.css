@@ -1,0 +1,39 @@
+/*
+* @Author: Administrator
+* @Date:   2018-04-11 13:48:38
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-04-11 14:01:57
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+.nav {
+	width: 720px;
+	height: 60px;
+	border: 1px solid #ccc;
+	border-top: 3px solid #f40;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+}
+.nav ul{
+	list-style-type: none;;
+    overflow: hidden;
+}
+.nav ul li {
+	width: 80px;
+	height: 60px;
+	font : 20px/60px 微软雅黑;
+	float: left;
+	text-align: center;
+}
+.list1 {
+	background-color: #f70;
+
+}
+.box {
+	width: 900px;
+	margin: 0 auto;
+}

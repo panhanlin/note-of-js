@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.out{
+			position: relative;
+			width: 600px;
+			height: 50px;
+			background-color: yellow;
+			overflow: hidden;
+			left: 600px;
+			top: 20px;	
+		
+		}
+		.inn{position: relative;
+			width: 800%;
+			margin-top:15px; 
+		}
+	.inn>p {
+		float: left;
+		line-height: 24px;
+	}
+	</style>
+</head>
+<body>
+	<div class="out">
+	<div class="inn">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis iste, fugiat placeat nihil fugit</p>
+		<p></p>
+	</div>
+</div>
+<script>
+	var $=function(sel){
+		return document.querySelector(sel);
+	};
+	var o=$('.out');
+	var p1=$('.inn>p:first-child');
+    var p2=$('.inn>p:last-child');
+    //复制一份给p2
+    p2.innerHTML=p1.innerHTML;
+    //实现条件滚动
+
+	var marquee=function(){
+		if($('.out').scrollLeft>=p1.offsetWidth){
+				$('.out').scrollLeft=0;
+		}
+		$('.out').scrollLeft++;
+
+	}
+	var timer=null;
+	timer=window.setInterval(marquee,20)
+</script>
+</body>
+</html>

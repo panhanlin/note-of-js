@@ -1,0 +1,52 @@
+课堂笔记0518
+
+精简显示效果设计
+一、网页结构设计
+.good>h2{商品类别}+ul>(li{商品$$})*20^div>button{精简显示}
+
+二、网页样式设计
+1.初始化设计
+*{m0+p0}
+li
+2.各种盒子的设置
+.goods{}
+.goods>div
+.goods li {}
+.goods h2 {}
+.goods button{}
+
+三、网页脚本设计
+1.引入jQuery库文件
+(1)本地引入
+<script src=""></script>
+(2)CDN引入
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+2.添加script标记
+script
+
+3.添加jQuery的reday事件
+$(document).reday(function(){
+	
+})
+简写形式:
+$(function(){
+	
+})
+4.选择元素
+$('li:gt(l1)')
+$('button')
+5.为所选元素添加方法和事件
+(1)加载事件方法
+.on('type',fn)
+.show()
+.hide()
+.trigger()模拟事件操作
+.is(':hidden')|.is(':visible')
+
+tip:! &&||
+(2)利用if...else...进行结构设计
+
+6.测试与修改
+
+end

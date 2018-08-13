@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="nav.css">
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li>
+				<a href="#">首页</a>	
+			</li>
+			<li>
+				<a href="#">国季楠</a>
+				<ul>
+					<li><a href="#">国</a></li>
+					<li><a href="#">季</a></li>
+					<li><a href="#">楠</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">潘潘</a>
+				<ul>
+					<li><a href="#">周</a></li>
+					<li><a href="#">杰</a></li>
+					<li><a href="#">伦</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">panpan</a>
+				<ul>
+					<li><a href="#">张</a></li>
+					<li><a href="#">小</a></li>
+					<li><a href="#">杰</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">潘翰霖</a>
+				<ul>
+					<li><a href="#">潘</a></li>
+					<li><a href="#">翰</a></li>
+					<li><a href="#">霖</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">联系我们</a>
+				
+			</li>
+		</ul>
+	</div>
+	<script src="script/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			// $('.nav>ul>li').on('mouseover',function(){
+			// 	// alert($(this).index())
+			// 	$(this).find('ul',this).slideDown();
+			
+			// })
+			// $('.nav>ul>li').on('mouseout',function(){
+			// 	$('.nav>ul>li ul').slideUp().stop();
+			// })
+			$('.nav>ul>li').on({
+				/*'mouseover'*/'mouseenter':function(){
+					// $(this).find('ul').show();
+					$(this).find('ul').slideDown();
+				},
+				/*'mouseout'*/'mouseleave':function(){
+					// $(this).find('ul').hide();
+					$(this).find('ul').slideUp();
+				}
+			})
+		})
+
+	</script>
+</body>
+</html>

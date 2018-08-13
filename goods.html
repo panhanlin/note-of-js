@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/gd.css">
+</head>
+
+<body>
+    <div class="goods">
+    	<h2>商品分类</h2>
+        <ul>
+            <li>商品1</li>
+            <li>商品2</li>
+            <li>商品3</li>
+            <li>商品4</li>
+            <li>商品5</li>
+            <li>商品6</li>
+            <li>商品7</li>
+            <li>商品8</li>
+            <li>商品9</li>
+            <li>商品10</li>
+            <li>商品11</li>
+            <li>商品12</li>
+            <li>商品13</li>
+            <li>商品14</li>
+            <li>商品15</li>
+            <li>商品16</li>
+            <li>商品17</li>
+            <li>商品18</li>
+            <li>商品19</li>
+            <li>商品20</li>
+        </ul>
+		<div><button>精简显示</button></div>
+    </div>
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script>
+    	$(function(){
+    		$('.goods button').on('click',
+    			function(){
+    				var test=$('li').is(":hidden");
+    				// alert(test);
+    				if(test){
+    					$('li').show();
+    					$('button').html('精简显示')
+
+    				}
+    				else{
+    					$('li:gt(9)').hide();
+    					$('button').html('更多显示...')
+    				}
+    				// $('.goods li:gt(9)').hide();
+    			})/*.trigger('click');*/
+    	})
+
+    </script>
+</body>
+
+</html>

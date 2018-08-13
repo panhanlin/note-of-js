@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.outer{
+			position: relative;
+			width: 800px;
+			border: 1px solid #f00;
+			overflow: scroll;
+		}
+		.inner{
+			width: 1000%;
+			overflow: hidden;
+		}
+		.inner ul,.inner li {
+			float: left;
+			list-style: none;
+
+		} 
+		.inner img {
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner">
+			<ul>
+				<li><img src="images/m1.jpg" alt=""></li>
+			
+				<li><img src="images/m2.jpg" alt=""></li>
+			
+				<li><img src="images/m3.jpg" alt=""></li>
+			
+				<li><img src="images/m4.jpg" alt=""></li>
+			
+				<li><img src="images/m5.jpg" alt=""></li>
+			
+				<li><img src="images/m6.jpg" alt=""></li>
+			
+				<li><img src="images/m7.jpg" alt=""></li>
+			</ul>
+			<ul></ul>
+		</div>
+	</div>
+	<script>
+		var $=function(sel){
+			return document.querySelector(sel);
+		};
+		//copy u1 to u2
+		var u1=$('.inner>ul:first-child');
+		var u2=$('.inner>ul:last-child');
+		u2.innerHTML=u1.innerHTML;
+		// alert(u1.offsetWidth);
+		var timer=null;
+		var scroll=function(){
+			if ($('.outer').scrollLeft>=u1.offsetWidth) {
+				$('.outer').scrollLeft-=u1.offsetWidth;
+			}
+			$('.outer').scrollLeft++;
+			timer=window.setTimeout(scroll,10);
+		}
+		scroll();
+		$('.outer').onmouseover=function(e){
+			window.clearTimeout(timer);
+		}
+		$('.outer').onmouseout=function(e){
+			scroll(timer);
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+题目 ：导航效果制作
+一，制作流程
+1.导航结构设计
+2.导航样式设计
+3.导航脚本设计
+4.导航效果测试
+二，使用知识技术
+1.浮动技术
+2.元素的显隐效果
+3.选取元素
+ （1）ele.querySelectorAll();
+  (2)ele.querySelector()
+4。事件加载
+	(1)onmouseover
+	(2)onmouseout
+	(3)onclick
+5.改变css样式技术
+	ele.style.cssText="";
+
+
+三、获取元素css属性及其数值
+1.计算后的css样式属性
+var cs=windows.getComputedStyle(ele,null);
+2.获取计算后css属性值
+(1)cs.getProperyValue("width")
+(2)cs["width"]
+(3)cs.width
